@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,9 +17,9 @@ namespace WPFPersona_BL
         /// <returns>
         ///     El listado de personas.
         /// </returns>
-        public List<clsPersona> getListadoPersonasBL()
+        public ObservableCollection<clsPersona> getListadoPersonasBL()
         {
-            List<clsPersona> lista = new List<clsPersona>();
+            ObservableCollection<clsPersona> lista = new ObservableCollection<clsPersona>();
             clsListadosDAL listado = new clsListadosDAL();
 
             lista = listado.getListadoPersonasDAL();

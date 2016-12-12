@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\clsMainPageVM.cs" />
+    <Compile Include="ViewModels\clsVMBase.cs" />
+    <Compile Include="ViewModels\DelegateCommand.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -94,6 +97,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WPFPersona-ENTITIES\WPFPersona-ENTITIES.csproj">
+      <Project>{003161cb-5b94-4c83-8f16-7ee88b5baa81}</Project>
+      <Name>WPFPersona-ENTITIES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WPFPersonas-BL\WPFPersonas-BL.csproj">
+      <Project>{f930531f-8a83-47cc-a07d-9901d7c07e33}</Project>
+      <Name>WPFPersonas-BL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\file.png" />
+    <Resource Include="Images\rubbish-bin.png" />
+    <Resource Include="Images\save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

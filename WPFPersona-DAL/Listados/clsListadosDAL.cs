@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -17,9 +18,9 @@ namespace WPFPersonaDAL
         /// <returns>
         ///     El listado de personas.
         /// </returns>
-        public List<clsPersona> getListadoPersonasDAL()
+        public ObservableCollection<clsPersona> getListadoPersonasDAL()
         {
-            List<clsPersona> lista = new List<clsPersona>();
+            ObservableCollection<clsPersona> lista = new ObservableCollection<clsPersona>();
             clsMyConnection miConexion = new clsMyConnection();
 
             SqlConnection conexion = new SqlConnection();
