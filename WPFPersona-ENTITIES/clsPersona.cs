@@ -22,7 +22,7 @@ namespace WPFPersona_ENTITIES
             Id = 0;
             Nombre = "";
             Apellidos = "";
-            FechaNac = new DateTime();
+            FechaNac = DateTime.Now;
             Direccion = "";
             Telefono = "";
         }

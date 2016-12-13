@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFPersona_UI"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="350" MinWidth="525">
+        Title="MainWindow" MinHeight="350" MinWidth="525" Language="es-ES">
     <Window.DataContext>
         <vm:clsMainPageVM></vm:clsMainPageVM>
     </Window.DataContext>
@@ -56,7 +56,7 @@
             <TextBox Name="txtApellidos" Grid.Column="1" Grid.Row="1" Margin="12,8" MaxHeight="36" Text="{Binding Apellidos, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>
 
             <TextBlock Text="Fecha de nacimiento: " Grid.Column="0" Grid.Row="2" Margin="12,8" VerticalAlignment="Center"/>
-            <TextBox Name="txtFechaNac" Grid.Column="1" Grid.Row="2" Margin="12,8" MaxHeight="36" Text="{Binding FechaNac, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>
+            <TextBox Name="txtFechaNac" Grid.Column="1" Grid.Row="2" Margin="12,8" MaxHeight="36" Text="{Binding FechaNac, Mode=TwoWay, UpdateSourceTrigger=Explicit,StringFormat=d}"/>
 
             <TextBlock Text="Teléfono: " Grid.Column="0" Grid.Row="3" Margin="12,8" VerticalAlignment="Center"/>
             <TextBox Name="txtTelefono" Grid.Column="1" Grid.Row="3" Margin="12,8" MaxHeight="36" Text="{Binding Telefono, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>

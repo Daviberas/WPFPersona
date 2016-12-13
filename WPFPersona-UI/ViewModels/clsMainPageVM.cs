@@ -20,7 +20,7 @@ namespace WPFPersona.ViewModels
         {
             _listado = lista.getListadoPersonasBL();
             _eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
-            _guardarCommand = new DelegateCommand(GuardarCommand_Executed, EliminarCommand_CanExecute);
+            _guardarCommand = new DelegateCommand(GuardarCommand_Executed, GuardarCommand_CanExecute);
             _crearCommand = new DelegateCommand(CrearCommand_Executed);
         }
 
@@ -75,7 +75,7 @@ namespace WPFPersona.ViewModels
         private bool EliminarCommand_CanExecute()
         {
             bool puedeBorrar = false;
-            if (personaSeleccionada != null)
+            if (personaSeleccionada != null && personaSeleccionada.Id != 0)
                 puedeBorrar = true;
             return puedeBorrar;
         }
@@ -103,6 +103,14 @@ namespace WPFPersona.ViewModels
                 MessageBox.Show("Error en la base de datos.");
             }
             listado = lista.getListadoPersonasBL();
+        }
+
+        private bool GuardarCommand_CanExecute()
+        {
+            bool puedeBorrar = false;
+            if (personaSeleccionada != null)
+                puedeBorrar = true;
+            return puedeBorrar;
         }
 
         public DelegateCommand crearCommand
