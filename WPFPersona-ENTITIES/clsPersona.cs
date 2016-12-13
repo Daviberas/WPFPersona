@@ -19,7 +19,7 @@ namespace WPFPersona_ENTITIES
         //Constructores
         public clsPersona()
         {
-            Id = 1;
+            Id = 0;
             Nombre = "";
             Apellidos = "";
             FechaNac = new DateTime();

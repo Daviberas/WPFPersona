@@ -13,7 +13,7 @@
     <DockPanel LastChildFill="True">
         <Menu Width="Auto" Height="32" DockPanel.Dock="Top">
             <StackPanel Orientation="Horizontal">
-                <Button ToolTip="New" Name="cmdNew" Command="{Binding Path=New}">
+                <Button ToolTip="New" Name="cmdNew" Command="{Binding crearCommand}">
                     <Image Source="Images/file.png"></Image>
                 </Button>
                 <Button ToolTip="Save" Name="cmdSave" Command="{Binding guardarCommand}" Click="cmdSave_Click">

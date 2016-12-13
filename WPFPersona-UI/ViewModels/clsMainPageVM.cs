@@ -12,6 +12,7 @@ namespace WPFPersona.ViewModels
         private ObservableCollection<clsPersona> _listado;
         private DelegateCommand _eliminarCommand;
         private DelegateCommand _guardarCommand;
+        private DelegateCommand _crearCommand;
         private clsManejadoraPersonaBL mane = new clsManejadoraPersonaBL();
         private clsListadosBL lista = new clsListadosBL();
 
@@ -20,6 +21,7 @@ namespace WPFPersona.ViewModels
             _listado = lista.getListadoPersonasBL();
             _eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
             _guardarCommand = new DelegateCommand(GuardarCommand_Executed, EliminarCommand_CanExecute);
+            _crearCommand = new DelegateCommand(CrearCommand_Executed);
         }
 
         public clsPersona personaSeleccionada
@@ -101,6 +103,19 @@ namespace WPFPersona.ViewModels
                 MessageBox.Show("Error en la base de datos.");
             }
             listado = lista.getListadoPersonasBL();
+        }
+
+        public DelegateCommand crearCommand
+        {
+            get
+            {
+                return _crearCommand;
+            }
+        }
+
+        private void CrearCommand_Executed()
+        {
+            personaSeleccionada = new clsPersona();
         }
     }
 }
